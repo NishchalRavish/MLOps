@@ -16,11 +16,19 @@ TARGET = 'Loan_Status'
 
 FEATURES = ['Gender', 'Married', 'Dependents', 'Education',
        'Self_Employed', 'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount',
-       'Loan_Amount_Term', 'Credit_History', 'Property_Area']
+       'Loan_Amount_Term', 'Credit_History', 'Property_Area','CoApplicantIncome']
 
 NUM_FEATURES = ['ApplicantIncome', 'LoanAmount', 'Loan_Amount_Term']
 
 CAT_FEATURES = ['Gender',
+ 'Married',
+ 'Dependents',
+ 'Education',
+ 'Self_Employed',
+ 'Credit_History',
+ 'Property_Area']
+
+FEATURES_TO_ENCODE = ['Gender',
  'Married',
  'Dependents',
  'Education',
