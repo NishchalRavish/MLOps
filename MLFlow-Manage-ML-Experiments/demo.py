@@ -9,7 +9,10 @@ def eval(p1,p2):
 
 
 def main(inp1,inp2):
+    mlflow.set_experiment("Demo Experiment")
+    # with mlflow.start_run():
     with mlflow.start_run(run_name='Example Demo'):
+        mlflow.set_tag("version",'1.0.0')
         mlflow.log_param("Param_1",inp1)
         mlflow.log_param("Param_2",inp2)
         metric=eval(p1=inp1,p2=inp2)
