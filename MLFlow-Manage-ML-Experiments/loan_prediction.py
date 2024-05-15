@@ -12,7 +12,7 @@ import mlflow
 import os
 
 # mlflow.set_tracking_uri("http://192.168.0.1:5000")
-# mlflow.set_tracking_uri("http://0.0.0.0:5001/")
+mlflow.set_tracking_uri("http://0.0.0.0:5000/")
 
 # load the dataset
 dataset = pd.read_csv("train.csv")
@@ -142,6 +142,7 @@ def eval_metrics(actual, pred):
 def mlflow_logging(model, X, y, name):
     
      with mlflow.start_run() as run:
+        mlflow.set_tracking_uri("http://0.0.0.0:5000/")
         run_id = run.info.run_id
         mlflow.set_tag("run_id", run_id)      
         pred = model.predict(X)
