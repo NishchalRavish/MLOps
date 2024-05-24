@@ -9,7 +9,7 @@ COPY . /src
 WORKDIR /src
 
 # GIve executable permissions
-RUN chmod +x docer_train.py
+RUN chmod +x docker_train.py
 
 RUN pip install -r requirements.txt
 
