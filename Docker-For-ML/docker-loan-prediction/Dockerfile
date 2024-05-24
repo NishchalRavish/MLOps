@@ -15,4 +15,4 @@ RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "python" ]
 
-CMD [ "docer_train.py" ]
+CMD [ "docker_train.py" ]
