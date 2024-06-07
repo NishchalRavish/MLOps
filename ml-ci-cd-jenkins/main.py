@@ -40,7 +40,7 @@ class LoanPrediction(BaseModel):
 def index():
     return {"Welcome to the App"}
 
-@app.get('/prediction_api')
+@app.post('/prediction_api')
 def predict(loan_details: LoanPrediction):
     data = loan_details.model_dump()
     prediction = generate_predictions([data])['predictions'][0]
@@ -50,7 +50,7 @@ def predict(loan_details: LoanPrediction):
         pred = 'Rejected'
     return {'status':pred}
 
-@app.get("prediction_ui")
+@app.post("prediction_ui")
 def predict_gui(Gender: str,
     Married: str,
     Dependents: str,
