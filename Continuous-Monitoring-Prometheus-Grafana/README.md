@@ -9,7 +9,7 @@ https://prometheus.io/docs/prometheus/latest/querying/basics/
 
 ```
 sudo su -
-git clone https://github.com/manifoldailearning/Prometheus-Grafana-Docs
+git clone https://github.com/NishchalRavish/Prometheus_Grafana_Docs
 cd Prometheus-Grafana-Docs/scripts
 
 chmod u=rwx,g=r,o=r 1-install.sh
